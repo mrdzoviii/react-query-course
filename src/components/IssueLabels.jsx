@@ -67,6 +67,7 @@ export default function IssueLabels({ labels, issueNumber }) {
               const labelObject = labelsQuery.data.find(
                 (lbl) => lbl.id === label
               );
+              if (!labelObject) return null;
               return (
                 <span key={label} className={`label ${labelObject.color}`}>
                   {labelObject.name}
@@ -90,7 +91,6 @@ export default function IssueLabels({ labels, issueNumber }) {
                 onClick={() => {
                   if (setLabels.isLoading) return;
                   setLabels.mutate(label.id);
-                  setMenuOpen(false);
                 }}
               >
                 <span
