@@ -1,16 +1,16 @@
 export const defaultLabels = [
   {
-    id: "1",
+    id: "bug",
     name: "bug",
     color: "red",
   },
   {
-    id: "2",
+    id: "feature",
     name: "feature",
     color: "blue",
   },
   {
-    id: "3",
+    id: "enhancement",
     name: "enhancement",
     color: "cyan",
   },
